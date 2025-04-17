@@ -1,5 +1,5 @@
 import sys#the sys module in python provides various function and variables that are used to manipulate different parts of the python runtime environment. Meaning for any exception that is getting controlled, the sys library will automatically have that information.
-from src.logger import logging
+from src.logger import logging#in the logger.py file, we imported the logging module and modified the basic config of the logging module. We are going to use this modified logging module in this file.
 
 def error_message_detail(error,error_detail:sys):#we are creating this function because we want to push our own custom message when error occurs. the first parameter(or input) to this function is the error message that we are getting and the second parameter is the error detail which will be basically present inside the sys.
     _,_,exc_tb=error_detail.exc_info()#the error_detail.exc_info() is talking about the execution info and it will give us three important information. We are not really interested in the first two but the last information will give us imformation (about on which file the exception has occured, on which line number the exception has occured...) which will be stored in exc_tb

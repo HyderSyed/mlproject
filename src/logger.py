@@ -3,12 +3,12 @@ import os
 from datetime import datetime
 
 # Now lets create our log file
-LOG_FILE = f"{datetime.now().strftime('%m_%d_%Y_%H-%M-%S')}.log"#our log file is text file which will be created in this name convention of date and time.
+LOG_FILE=f"{datetime.now().strftime('%m_%d_%Y_%H_%M_%S')}.log"#our log file is text file which will be created in this name convention of date and time.
 #we also need to give the path of the log file where we want to create it.
-logs_path = os.path.join(os.getcwd(), "logs", LOG_FILE)#creating the path of the log file in the current working directory which is src.
+logs_path=os.path.join(os.getcwd(),"logs",LOG_FILE)#creating the path of the log file in the current working directory which is src.
 #we are joining the current working directory with the logs folder and the log file name.
 #Every file name will start with logs followed by the value in the LOG_FILE variable.
-os.makedirs(logs_path, exist_ok=True)#here, exist_ok=True means even though there is a folder, keep on appending the files in that folder
+os.makedirs(logs_path,exist_ok=True)#here, exist_ok=True means even though there is a folder, keep on appending the files in that folder
 
 LOG_FILE_PATH=os.path.join(logs_path,LOG_FILE)
 
@@ -20,3 +20,4 @@ logging.basicConfig(
 
 
 )
+
